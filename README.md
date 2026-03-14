@@ -149,7 +149,7 @@ python vrptw_ga_v2.py Data/Solomon/C101.txt --time 30 --pop 50 --gen 100
 
 ### Saída esperada
 
-
+```
 Instância  : Data/Solomon/C101.txt
 Clientes   : 100
 Capacidade : 200
@@ -162,7 +162,7 @@ Melhor inicial: 12 veículos | dist=1234.56 | fit=12001234.56
   Gen   40 | veículos=10 | dist=828.94  | t=52.1s
 
 Busca local final...
-```
+
 ==================================================
 MELHOR SOLUÇÃO ENCONTRADA
   Veículos   : 10
