@@ -19,7 +19,6 @@ Implementação de um **Algoritmo Genético híbrido com busca local** para o **
 9. [Parâmetros e ajuste fino](#parâmetros-e-ajuste-fino)
 10. [Referências](#referências)
 
----
 
 ## Sobre o problema
 
@@ -30,7 +29,7 @@ O **VRPTW** (Vehicle Routing Problem with Time Windows) é um problema de otimiz
 - **Objetivo hierárquico** (padrão Solomon):
   1. Minimizar a **distância total** percorrida
 
----
+
 
 ## Metodologia
 
@@ -70,7 +69,7 @@ A busca local é aplicada periodicamente ao melhor indivíduo da população e a
 4. **Node Relocate**: move clientes individuais para a melhor posição em outra rota
 5. Segunda rodada de Or-opt após relocate
 
----
+
 
 ## Estrutura do repositório
 
@@ -95,7 +94,7 @@ A busca local é aplicada periodicamente ao melhor indivíduo da população e a
 └── README.md
 ```
 
----
+
 
 ## Instalação
 
@@ -115,7 +114,6 @@ pip install deap rich
 | `deap` | Framework do Algoritmo Genético (obrigatório) |
 | `rich` | Tabela colorida no terminal pelo `validar.py` (opcional) |
 
----
 
 ## Uso — Algoritmo principal (`vrptw_ga_v2.py`)
 
@@ -151,7 +149,7 @@ python vrptw_ga_v2.py Data/Solomon/C101.txt --time 30 --pop 50 --gen 100
 
 ### Saída esperada
 
-```
+
 Instância  : Data/Solomon/C101.txt
 Clientes   : 100
 Capacidade : 200
@@ -174,7 +172,7 @@ Route #1: 5 3 7 8 10 11 9 6 4 2 1
 ...
 ```
 
----
+
 
 ## Uso — Validador comparativo (`validar.py`)
 
@@ -263,7 +261,6 @@ Data/Solomon/
 
 Arquivos `.sol` sem `.txt` correspondente (ou vice-versa) são ignorados com aviso.
 
----
 
 ## Formato das instâncias
 
@@ -286,7 +283,7 @@ CUST NO.  XCOORD.  YCOORD.  DEMAND  READY TIME  DUE DATE  SERVICE TIME
 - O cliente `0` é sempre o depósito
 - Coordenadas e tempos são inteiros ou reais
 
----
+
 
 ## Formato dos arquivos de solução ótima (`.sol`)
 
@@ -302,7 +299,6 @@ Cost 827.3
 - A linha `Cost` contém a distância total da solução ótima
 - O número de rotas define o número mínimo de veículos necessários
 
----
 
 ## Parâmetros e ajuste fino
 
@@ -324,7 +320,7 @@ Cost 827.3
 
 > **Nota:** O tempo de construção da população inicial cresce com O(n²) por instância. Para instâncias grandes, reduza `--pop` e aumente `--time`.
 
----
+
 
 ## Referências
 
